@@ -45,22 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Add event handlers //
 
 	cells.forEach((cell, index) => {
-		cell.addEventListener("click touchstart", () =>
-			handleClickCell(cell, index),
-		);
+		cell.addEventListener("mousedown", () => handleClickCell(cell, index));
 		cell.addEventListener("mouseenter", handleHoverCell);
 		cell.addEventListener("mouseleave", handleLeaveCell);
 	});
 
 	for (const button of document.querySelectorAll("#choose-opponent button")) {
-		button.addEventListener("click touchstart", handleChooseOpponent);
+		button.addEventListener("mousedown", handleChooseOpponent);
 	}
 
 	for (const button of document.querySelectorAll("#choose-symbol button")) {
-		button.addEventListener("click touchstart", handleChooseSymbol);
+		button.addEventListener("mousedown", handleChooseSymbol);
 	}
 
-	restartButton.addEventListener("click touchstart", restartGame);
+	restartButton.addEventListener("mousedown", restartGame);
 
 	// functions //
 
@@ -178,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (gameMessage) gameMessage.textContent = `Computer's thinking ...`;
 		setTimeout(() => {
 			const move = computeMove(board, currentPlayer);
-			cells[move].dispatchEvent(new Event("click touchstart"));
+			cells[move].dispatchEvent(new Event("mousedown"));
 			gameBoard?.classList.remove("computer-busy");
 			for (const cell of cells) {
 				cell.addEventListener("mouseenter", handleHoverCell);
