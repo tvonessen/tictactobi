@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+
+  <meta name="description" content="A simple Tic Tac Toe game built with HTML, CSS, and JavaScript.">
+  <meta name="keywords" content="Tic Tac Toe, game, JavaScript, HTML, CSS">
+  <meta name="author" content="Tobias von Essen">
+
+  <meta name="copyright" content="Copyright © 2023 Tobias von Essen. All rights reserved.">
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="tictactoe.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <h1>Tic Tac Toe</h1>
+  </header>
+
+  <aside>
+
+  </aside>
+  
+  <content id="game-container" data-content="choose-opponent">
+
+    <h2 id="game-message" >Welcome to a game of Tic Tac Toe!</h2>
+    
+    <div id="choose-opponent">
+      <h3>Choose your opponent</h3>
+      
+      <div id="opponent-selection">
+        <button id="human-button" class="opponent-button">Human</button>
+        <button id="computer-button" class="opponent-button">Computer</button>
+      </div>
+    </div>
+    
+    <div id="choose-symbol">
+      <h3>Choose your symbol</h3>
+      <h4>X begins.</h4>
+      
+      <div id="symbol-selection">
+        <button id="x-button" class="symbol-button">X</button>
+        <button id="o-button" class="symbol-button">O</button>
+      </div>
+    </div>
+    
+    
+    <ul id="game-board">
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+      <li class="cell" data-cell></li>
+    </ul>
+
+  </content>
+
+  <footer>
+    <button id="restart-button">Restart Game</button>
+  </footer>
+
+</body>
+</html>
